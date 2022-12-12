@@ -1,10 +1,11 @@
-package com.example.testtask
+package com.example.testtask.game
 
 import android.graphics.Canvas
 import android.view.SurfaceHolder
 
 class MainThread (private val surfaceHolder: SurfaceHolder,
-                  private val gamePanel: GamePanel) : Thread() {
+                  private val gamePanel: GamePanel
+) : Thread() {
     private var averageFPS: Double = 0.toDouble()
     private var running: Boolean = false
 

@@ -1,4 +1,4 @@
-package com.example.testtask
+package com.example.testtask.game
 
 import android.content.Context
 

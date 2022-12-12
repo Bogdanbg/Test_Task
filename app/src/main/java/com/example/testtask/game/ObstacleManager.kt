@@ -1,4 +1,4 @@
-package com.example.testtask
+package com.example.testtask.game
 
 import android.graphics.Canvas
 import android.graphics.Color
@@ -55,7 +55,8 @@ class ObstacleManager(private val playerGap: Int,
             val xStart = (Math.random() * (Constants.SCREEN_WIDTH - playerGap)).toInt()
             obstacles.add(0, Obstacle(obstacleHeight, color, xStart,
             obstacles[0].rectangle.top - obstacleHeight - obstacleGap,
-            playerGap))
+            playerGap)
+            )
             obstacles.removeAt(obstacles.size - 1)
             score++
         }

@@ -1,11 +1,11 @@
-package com.example.testtask
+package com.example.testtask.game
 
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Point
 import android.graphics.Rect
 
-class RectPlayer (var rectangle: Rect, private var color: Int) : GameObject{
+class RectPlayer (var rectangle: Rect, private var color: Int) : GameObject {
 
     init {
         this.rectangle = rectangle

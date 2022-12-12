@@ -1,4 +1,4 @@
-package com.example.testtask
+package com.example.testtask.game
 
 import android.content.Context
 import android.graphics.Canvas
@@ -9,10 +9,9 @@ import android.graphics.Rect
 import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
-import androidx.annotation.MainThread
 
 class GamePanel (context: Context) : SurfaceView(context), SurfaceHolder.Callback{
-    private val thread: com.example.testtask.MainThread
+    private val thread: com.example.testtask.game.MainThread
     private val rectangle = Rect()
 
     private val player: RectPlayer
@@ -31,7 +30,8 @@ class GamePanel (context: Context) : SurfaceView(context), SurfaceHolder.Callbac
 
         player = RectPlayer(Rect(100, 100, 200, 200),
                 Color.rgb(255,0,0))
-        playerPoint = Point(Constants.SCREEN_WIDTH / 2,
+        playerPoint = Point(
+            Constants.SCREEN_WIDTH / 2,
         3 * Constants.SCREEN_HEIGHT / 4)
         player.update(playerPoint!!)
 
@@ -44,7 +44,8 @@ class GamePanel (context: Context) : SurfaceView(context), SurfaceHolder.Callbac
     }
 
     private fun reset(){
-        playerPoint = Point(Constants.SCREEN_WIDTH / 2,
+        playerPoint = Point(
+            Constants.SCREEN_WIDTH / 2,
         3 * Constants.SCREEN_HEIGHT / 4)
         player.update(playerPoint!!)
         obstacleManager = ObstacleManager(200,350,

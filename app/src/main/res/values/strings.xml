@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">TestTask</string>
-    <string name="choose_role">Choose role</string>
+    <string name="ipAddress">Choose role</string>
     <string name="moderator_bot">Moderator/Bot</string>
     <string name="guest">Guest</string>
 </resources>

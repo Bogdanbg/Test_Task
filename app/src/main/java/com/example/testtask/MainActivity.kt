@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
 
     // private var targetIp = targetIp.add("10.0.2.16")
-    private var targetIp = mutableListOf<String>() // Here you can store a list of ip`s instead of one
+    private var botListIp = mutableListOf<String>() // Here you can store a list of ip`s instead of one
                                                // and walk through it to compare with ip of current user
     private lateinit var binding: ActivityMainBinding
 
@@ -22,16 +22,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        targetIp.add("10.2.0.16")
-        targetIp.add("11.0.2.12")
+        botListIp.add("10.2.0.16")
+        botListIp.add("11.0.2.12")
       //  targetIp.add("10.0.2.16") //commented real ip to check the condition
 
         val currentIp:String = getIp(applicationContext)
 
-        if (isValid(currentIp, targetIp))
-            startActivity(Intent(this, WebViewActivity::class.java))
-        else
+        if (isValid(currentIp, botListIp))
             startActivity(Intent(this, GameActivity::class.java))
+        else
+            startActivity(Intent(this, WebViewActivity::class.java))
     }
 
     private fun isValid(currentIp: String, addressList: MutableList<String>): Boolean{
